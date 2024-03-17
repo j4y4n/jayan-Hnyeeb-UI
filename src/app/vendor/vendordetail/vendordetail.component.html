@@ -1,0 +1,21 @@
+<div class="col-12 my-3">
+    <select name="" id="" class="my-3 mx-3" #vnamecombobox>
+        <option value="" selected disabled hidden>Choose here</option>
+        <option *ngFor="let vendor of vendorlist">{{ vendor }}</option>
+    </select>
+    <button class="btn btn-dark mx-3" (click)="getvendorreport(vnamecombobox.value)">Report</button>
+    <button class="btn btn-dark" (click)="getdetailbyname(vnamecombobox.value)">Get Detail</button>
+</div>
+<div class="col-11 mx-4 my-3">
+    <div #vdetails>
+
+    </div>
+    <table class="table">
+        <thead>
+
+        </thead>
+        <tbody #tbody>
+           
+        </tbody>
+    </table>
+</div>

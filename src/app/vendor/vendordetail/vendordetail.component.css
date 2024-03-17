@@ -1,0 +1,7 @@
+select{
+    width: 30%;
+    /* height: 40px; */
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid black;
+}

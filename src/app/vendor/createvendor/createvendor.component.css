@@ -1,0 +1,7 @@
+input{
+    all: unset;
+    width: 30%;
+    /* border: none; */
+    border-bottom: 2px solid black;
+    height: 30px;
+}

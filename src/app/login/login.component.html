@@ -1,0 +1,44 @@
+<div class="login-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 m-auto">
+                <div class="bg-white shadow-lg rounded-3">
+                    <div class="row">
+                        <div class="col-md-7 pe-0">
+                            <div class="form-left h-100 py-5 px-5">
+                                <div class="row g-4">
+                                        
+                                    <h2>Hnyeeb</h2>
+                                        <hr>
+
+                                        <div class="col-12">
+                                            <label>Username<span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Enter Username" #username>
+                                            </div> 
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label>Password<span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <input type="password" class="form-control" placeholder="Enter Password" #password>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-dark float-end mt-4 px-5" (click)="login(username.value,password.value)">Login</button>
+                                        </div>  
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 ps-0 d-none d-md-block">
+                            <div class="form-right h-100  text-white text-center pt-5">
+                                <img src="assets/bee.png" alt="" width="500px" id="bee">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

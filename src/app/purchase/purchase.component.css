@@ -1,0 +1,27 @@
+select{
+    width: 20%;
+    /* height: 40px; */
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid black;
+}
+/* input{
+    padding:5px;
+    width: 100%;
+    background-color: white;
+    border: none;
+    border: 2px solid black;
+
+} */
+input{
+    all: unset;
+    width: 150%;
+    /* border: none; */
+    border-bottom: 2px solid black;
+    height: 30px;
+}
+
+td{
+    
+    overflow: hidden;
+}
