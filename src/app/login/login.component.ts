@@ -11,7 +11,16 @@ export class LoginComponent {
 
   constructor(private apiService: ApiService, private router: Router ) {}
 
+  @ViewChild('usererror', { read: ElementRef }) usererror!: ElementRef;
+  @ViewChild('passworderror', { read: ElementRef }) passworderror!: ElementRef;
+  @ViewChild('eye', { read: ElementRef }) eye!: ElementRef;
+
+  fieldTextType: boolean=false;
+
+
   login(name:string,password:string) {
+    this.usererror.nativeElement.innerHTML=""
+    this.passworderror.nativeElement.innerHTML=""
     const data={
       "userName": name,
       "password": password         
@@ -22,7 +31,22 @@ export class LoginComponent {
       if(data.message=="Success"){
         this.router.navigate(['/home']);
       }
+      else if(data.message == "No User Found"){
+        this.usererror.nativeElement.innerHTML=data.message
+      }
+      else{
+        this.passworderror.nativeElement.innerHTML=data.message
+
+      }
     });
   }
+
+  showpassword(){
+    this.fieldTextType = !this.fieldTextType;
+    if(this.fieldTextType==true){
+      
+    }
+  }
+
 
 }

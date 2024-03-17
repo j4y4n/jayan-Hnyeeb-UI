@@ -68,7 +68,9 @@ export class StockComponent {
     newtr.appendChild(deleteIcon);
 
     this.tbody.nativeElement.appendChild(newtr);
-
+    this.ppkgvalue=""
+    this.totalkgvalue=""
+    this.pricevalue=""
 
   }
 

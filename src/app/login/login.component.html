@@ -16,17 +16,25 @@
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="Enter Username" #username>
                                             </div> 
+                                            <div class="text-danger" #usererror></div>
                                         </div>
-
+                                        
                                         <div class="col-12">
                                             <label>Password<span class="text-danger">*</span></label>
                                             <div class="input-group">
-                                                <input type="password" class="form-control" placeholder="Enter Password" #password>
+                                                <input  [type]="fieldTextType ? 'text' : 'password'" class="form-control" style="position: relative;" placeholder="Enter Password" #password>
+                                                <span #eye style="z-index: 99;">
+                                                    <i  [ngClass]="{
+                                                        'fa-eye-slash fas ': !fieldTextType,
+                                                        'fa-eye fa ': fieldTextType
+                                                      }"style="position: absolute;right:10px;bottom:10px;" (click)="showpassword()"></i>
+                                                </span>
                                             </div>
+                                            <div class="text-danger" #passworderror></div>
                                         </div>
 
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-dark float-end mt-4 px-5" (click)="login(username.value,password.value)">Login</button>
+                                            <button type="submit" class="btn btn-dark float-end mt-4" style="padding-left: 20%;padding-right: 20%;" (click)="login(username.value,password.value)">Login</button>
                                         </div>  
                                     </div>
                             </div>
