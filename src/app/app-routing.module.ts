@@ -8,6 +8,7 @@ import { CreatevendorComponent } from './vendor/createvendor/createvendor.compon
 import { VendordetailComponent } from './vendor/vendordetail/vendordetail.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { StockComponent } from './stock/stock.component';
+import { UserComponent } from './user/user.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,9 @@ const routes: Routes = [
     },
     {
       path:'stock',component:StockComponent
+    },
+    {
+      path:'user', component: UserComponent
     }
   
   ]

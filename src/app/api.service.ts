@@ -9,6 +9,10 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  // create a new user
+  public createUser(user: any) {
+    return this.http.post('http://localhost:8080/api/v1/users/create', user);
+  }
 
   public login(data: any): Observable<any> {
     return this.http.post(`http://localhost:8080/api/v1/users/login`, data);
