@@ -8,6 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class StockComponent {
 
+  //constructor
   constructor(private apiService: ApiService) { }
 
   @ViewChild('balanceinfo', { read: ElementRef }) balanceinfo!: ElementRef;
